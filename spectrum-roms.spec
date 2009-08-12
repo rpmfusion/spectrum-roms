@@ -2,14 +2,14 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        1
+Release:        2%{?dist}
 Summary:        A collection of Spectrum ROM images
 
 Group:          Applications/Emulators
 License:        Distributable
 URL:            http://www.chiark.greenend.org.uk/~cjwatson/code/spectrum-roms/
-Source0:        http://www.chiark.greenend.org.uk/~cjwatson/code/spectrum-roms/spectrum-roms-%{real_version}.tar.gz
-Source1:        spectrum-roms-distribution.txt
+Source0:        http://www.chiark.greenend.org.uk/~cjwatson/code/%{name}/%{name}-%{real_version}.tar.gz
+Source1:        %{name}-distribution.txt
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
 # Install Amstrad distribution acknowledge
-install -pm 0644 %{SOURCE1} .
+install -pm 0644 %{SOURCE1} distribution.txt
 
 # Remove installed docs
 rm -rf $RPM_BUILD_ROOT%{_docdir}
@@ -46,10 +46,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %{_datadir}/%{name}
-%doc ChangeLog README spectrum-roms-distribution.txt 
+%doc ChangeLog README distribution.txt 
 
 
 %changelog
+* Wed Aug 12 2009 Andrea Musuruane <musuruan@gmail.com> 0.0.20081224-2
+- Cosmetic changes
+
 * Sat Jul 25 2009 Andrea Musuruane <musuruan@gmail.com> 0.0.20081224-1
 - First release
 
