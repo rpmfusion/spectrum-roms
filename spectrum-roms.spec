@@ -2,7 +2,7 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A collection of Spectrum ROM images
 
 Group:          Applications/Emulators
@@ -50,6 +50,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.0.20081224-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Wed Aug 12 2009 Andrea Musuruane <musuruan@gmail.com> 0.0.20081224-2
 - Cosmetic changes
 
