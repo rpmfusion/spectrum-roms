@@ -2,15 +2,13 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        A collection of Spectrum ROM images
 
-Group:          Applications/Emulators
 License:        Distributable
 URL:            http://www.chiark.greenend.org.uk/~cjwatson/code/spectrum-roms/
 Source0:        http://www.chiark.greenend.org.uk/~cjwatson/code/%{name}/%{name}-%{real_version}.tar.gz
 Source1:        %{name}-distribution.txt
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
 
@@ -39,17 +37,15 @@ install -pm 0644 %{SOURCE1} distribution.txt
 rm -rf $RPM_BUILD_ROOT%{_docdir}
 
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-
 %files
-%defattr(-,root,root,-)
 %{_datadir}/%{name}
 %doc ChangeLog README distribution.txt 
 
 
 %changelog
+* Mon Aug 12 2013 Andrea Musuruane <musuruan@gmail.com> 0.0.20081224-5
+- Dropped obsolete Group, Buildroot, %%clean and %%defattr
+
 * Tue Mar 12 2013 Nicolas Chauvet <kwizart@gmail.com> - 0.0.20081224-4
 - https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
