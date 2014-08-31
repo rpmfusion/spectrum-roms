@@ -2,7 +2,7 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        A collection of Spectrum ROM images
 
 License:        Distributable
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT%{_docdir}
 
 
 %changelog
+* Sun Aug 31 2014 Sérgio Basto <sergio@serjux.com> - 0.0.20081224-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
+
 * Mon Aug 12 2013 Andrea Musuruane <musuruan@gmail.com> 0.0.20081224-5
 - Dropped obsolete Group, Buildroot, %%clean and %%defattr
 
