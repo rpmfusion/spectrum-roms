@@ -2,7 +2,7 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        A collection of Spectrum ROM images
 
 License:        Distributable
@@ -11,6 +11,7 @@ Source0:        http://www.chiark.greenend.org.uk/~cjwatson/code/%{name}/%{name}
 Source1:        %{name}-distribution.txt
 
 BuildArch:      noarch
+BuildRequires:  perl
 
 
 %description
@@ -27,7 +28,6 @@ make %{?_smp_mflags}
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
 # Install Amstrad distribution acknowledge
@@ -43,6 +43,11 @@ rm -rf $RPM_BUILD_ROOT%{_docdir}
 
 
 %changelog
+* Thu Jul 21 2016 Andrea Musuruane <musuruan@gmail.com> - 0.0.20081224-7
+- Added perl BR per
+  https://fedoraproject.org/wiki/Changes/Build_Root_Without_Perl
+- Dropped cleaning at the beginning of %%install
+
 * Sun Aug 31 2014 Sérgio Basto <sergio@serjux.com> - 0.0.20081224-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
