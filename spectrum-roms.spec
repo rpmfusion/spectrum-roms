@@ -2,7 +2,7 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        A collection of Spectrum ROM images
 
 License:        Distributable
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT%{_docdir}
 
 
 %changelog
+* Sun Mar 26 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.0.20081224-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Thu Jul 21 2016 Andrea Musuruane <musuruan@gmail.com> - 0.0.20081224-7
 - Added perl BR per
   https://fedoraproject.org/wiki/Changes/Build_Root_Without_Perl
