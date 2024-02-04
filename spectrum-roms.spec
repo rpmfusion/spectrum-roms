@@ -2,7 +2,7 @@
 
 Name:           spectrum-roms
 Version:        0.0.%{real_version}
-Release:        21%{?dist}
+Release:        22%{?dist}
 Summary:        A collection of Spectrum ROM images
 
 License:        Distributable
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT%{_docdir}
 
 
 %changelog
+* Sun Feb 04 2024 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.0.20081224-22
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
 * Thu Aug 03 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.0.20081224-21
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 
